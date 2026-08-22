@@ -1,3 +1,7 @@
+import JobTilte from './components/JobTilte'
+import Conversation from './components/Conversation'
+import UserAnswer from './components/UserAnswer'
+
 import './App.css'
 
 function App() {
@@ -5,7 +9,9 @@ function App() {
 
   return (
     <>
-      <h1>This is Mission 3</h1>
+      <JobTilte />
+      <Conversation />
+      <UserAnswer />
     </>
   )
 }
