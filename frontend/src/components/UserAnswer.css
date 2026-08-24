@@ -1,0 +1,141 @@
+/* ========================================
+   FIX ANSWER CARD IN ONE POSITION
+======================================== */
+
+form:has(#user-answer) {
+  position: fixed;
+
+  left: 50%;
+
+  bottom: 30px;
+
+  transform: translateX(-50%);
+
+  width: 800px;
+
+  max-width: 90vw;
+
+  padding: 13px 25px;
+
+  background: rgba(15, 23, 42, 0.94);
+
+  border: 1px solid rgba(148, 163, 184, 0.2);
+
+  border-radius: 20px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+
+  backdrop-filter: blur(14px);
+
+  box-sizing: border-box;
+
+  z-index: 10;
+}
+
+/* ========================================
+   ANSWER TEXT AREA
+======================================== */
+
+#user-answer {
+  display: block;
+
+  width: 100%;
+
+  height: 200px;
+
+  padding: 16px;
+
+  margin: 0;
+
+  background: rgba(2, 6, 23, 0.9);
+
+  border: 2px solid #334155;
+
+  border-radius: 14px;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-family: Arial, sans-serif;
+
+  line-height: 1.5;
+
+  outline: none;
+
+  resize: none;
+
+  box-sizing: border-box;
+}
+
+/* ========================================
+   PLACEHOLDER
+======================================== */
+
+#user-answer::placeholder {
+  color: #64748b;
+}
+
+/* ========================================
+   FOCUS
+======================================== */
+
+#user-answer:focus {
+  border-color: #6366f1;
+
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+/* ========================================
+   SUBMIT BUTTON
+======================================== */
+
+form:has(#user-answer) button {
+  display: block;
+
+  width: 100%;
+
+  height: 52px;
+
+  margin-top: 12px;
+
+  border: none;
+
+  border-radius: 13px;
+
+  background: linear-gradient(135deg, #06e257, #048b53);
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+form:has(#user-answer) button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+  form:has(#user-answer) {
+    width: 94vw;
+
+    bottom: 15px;
+
+    padding: 15px;
+  }
+
+  #user-answer {
+    height: 160px;
+  }
+}

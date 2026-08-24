@@ -1,1 +1,136 @@
-/* CSS will be here */
+/* ========================================
+   GLOBAL
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+
+  background: linear-gradient(135deg, #020617 0%, #0f172a 50%, #111827 100%);
+
+  color: #f8fafc;
+}
+
+/* ========================================
+   MAIN TITLE
+======================================== */
+
+.app-container h1 {
+  margin: 0 0 35px;
+
+  text-align: center;
+
+  font-size: 40px;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+
+  color: #f8fafc;
+
+  text-shadow: 0 0 25px rgba(99, 102, 241, 0.3);
+}
+
+/* ========================================
+   TITLE UNDERLINE
+======================================== */
+
+.app-container h1::after {
+  content: "";
+
+  display: block;
+
+  width: 70px;
+
+  height: 4px;
+
+  margin: 14px auto 0;
+
+  border-radius: 10px;
+
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+}
+
+/* ========================================
+   COMPONENT CONTAINERS
+======================================== */
+
+.app-container > div {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+/* ========================================
+   CONVERSATION
+======================================== */
+
+.app-container > div > .conversation-container {
+  width: 100%;
+}
+
+/* ========================================
+   USER ANSWER
+======================================== */
+
+.app-container .user-answer-container {
+  margin-left: auto;
+
+  margin-right: auto;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+  #root::before {
+    font-size: 50px;
+
+    letter-spacing: 5px;
+  }
+
+  .app-container {
+    padding: 40px 20px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+  .app-container {
+    padding: 30px 15px;
+  }
+
+  .app-container h1 {
+    font-size: 30px;
+
+    margin-bottom: 25px;
+  }
+
+  #root::before {
+    font-size: 32px;
+
+    letter-spacing: 3px;
+
+    background-position: center;
+  }
+}
