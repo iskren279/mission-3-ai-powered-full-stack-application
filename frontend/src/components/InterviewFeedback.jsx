@@ -1,10 +1,17 @@
+import ReactMarkdown from "react-markdown";
+import styles from "./InterviewFeedback.module.css";
+
 const InterviewFeedback = ({ feedback }) => {
   return (
-    <div>
-      <h2>Interview Feedback</h2>
+    <section className={styles.interviewFeedback}>
+      <h2 className={styles.title}>
+        Interview Feedback
+      </h2>
 
-      <p>{feedback}</p>
-    </div>
+      <div className={styles.content}>
+        <ReactMarkdown>{feedback}</ReactMarkdown>
+      </div>
+    </section>
   );
 };
 
