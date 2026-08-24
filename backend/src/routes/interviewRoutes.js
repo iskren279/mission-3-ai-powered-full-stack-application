@@ -66,7 +66,7 @@ router.post("/:sessionId/answer", async (req, res) => {
 
     // If Question 6 has just been answered,
     // generate final feedback.
-    if (session.questionCount >= 6) {
+    if (session.questionCount >= 7) {
       const feedback = await generateInterviewFeedback(
         session.jobTitle,
         session.conversation,
