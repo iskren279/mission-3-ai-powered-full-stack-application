@@ -1,0 +1,56 @@
+.interviewFeedback {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px;
+  background-color: #ffffff;
+  color: #374151;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.title {
+  margin: 0 0 24px;
+  color: #111827;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.content {
+  color: #374151;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.content h3 {
+  margin: 28px 0 12px;
+  color: #111827;
+  font-size: 21px;
+}
+
+.content p {
+  margin-bottom: 18px;
+  color: #374151;
+  line-height: 1.7;
+}
+
+.content ul {
+  margin-bottom: 22px;
+  padding-left: 28px;
+}
+
+.content li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.content strong {
+  color: #111827;
+  font-weight: 700;
+}
+
+.content hr {
+  margin: 24px 0;
+  border: 0;
+  border-top: 1px solid #d1d5db;
+}
