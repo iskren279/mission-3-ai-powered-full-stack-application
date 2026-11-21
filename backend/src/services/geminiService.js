@@ -1,24 +1,25 @@
+// show this
 const { GoogleGenAI } = require("@google/genai");
 
 const ai = new GoogleGenAI({
-    apiKey: process.env.GEMINI_API_KEY,
+  apiKey: process.env.GEMINI_API_KEY,
 });
 
 async function testGemini() {
-    const response = await ai.models.generateContent({
-        model: "gemini-3.6-flash",
-        contents: "Say hello and confirm that you are working.",
-    });
+  const response = await ai.models.generateContent({
+    model: "gemini-3.6-flash",
+    contents: "Say hello and confirm that you are working.",
+  });
 
-    return response.text;
+  return response.text;
 }
-
+// show this
 async function generateInterviewQuestion(jobTitle, conversation) {
-    const formattedConversation = conversation
-        .map((message) => `${message.role}: ${message.content}`)
-        .join("\n");
+  const formattedConversation = conversation
+    .map((message) => `${message.role}: ${message.content}`)
+    .join("\n");
 
-    const prompt = `
+  const prompt = `
 You are a professional job interviewer.
 
 The candidate is interviewing for this role:
@@ -47,20 +48,20 @@ Rules:
 Return only the next interview question.
 `;
 
-    const response = await ai.models.generateContent({
-        model: "gemini-3.6-flash",
-        contents: prompt,
-    });
+  const response = await ai.models.generateContent({
+    model: "gemini-3.6-flash",
+    contents: prompt,
+  });
 
-    return response.text;
+  return response.text;
 }
 
 async function generateInterviewFeedback(jobTitle, conversation) {
-    const formattedConversation = conversation
-        .map((message) => `${message.role}: ${message.content}`)
-        .join("\n");
+  const formattedConversation = conversation
+    .map((message) => `${message.role}: ${message.content}`)
+    .join("\n");
 
-    const prompt = `
+  const prompt = `
 You are a professional job interviewer.
 
 The candidate was interviewing for this role:
@@ -91,16 +92,16 @@ Base your feedback only on their interview answers.
 Return the feedback as clear, readable text.
 `;
 
-    const response = await ai.models.generateContent({
-        model: "gemini-3.6-flash",
-        contents: prompt,
-    });
+  const response = await ai.models.generateContent({
+    model: "gemini-3.6-flash",
+    contents: prompt,
+  });
 
-    return response.text;
+  return response.text;
 }
 
 module.exports = {
-    testGemini,
-    generateInterviewQuestion,
-    generateInterviewFeedback,
+  testGemini,
+  generateInterviewQuestion,
+  generateInterviewFeedback,
 };

@@ -1,3 +1,4 @@
+// Show this
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
@@ -10,6 +11,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors());
+// show this
 app.use(express.json());
 
 // Test route
@@ -20,6 +22,7 @@ app.get("/api/test", (req, res) => {
 });
 
 // Interview routes
+// show this
 app.use("/api/interview", interviewRoutes);
 
 app.listen(PORT, () => {
